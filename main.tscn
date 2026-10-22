@@ -2,5 +2,23 @@
 
 [ext_resource type="Script" uid="uid://c36hfhh434vkf" path="res://main.gd" id="1_ig7tw"]
 
-[node name="Node2D" type="Node2D" unique_id=632226302]
+[node name="Node2D" type="Control" unique_id=1564007476]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_ig7tw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2139970187]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 656.0
+color = Color(0.05411756, 0.04681389, 0.032916762, 1)
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=20381960]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 377.0
+offset_right = 723.0
+offset_bottom = 408.0
+deselect_on_focus_loss_enabled = false
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
