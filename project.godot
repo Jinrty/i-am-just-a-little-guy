@@ -12,13 +12,21 @@ config_version=5
 
 config/name="I_am_just_a_little_guy"
 run/main_scene="uid://s77lmq63yt6f"
-config/features=PackedStringArray("4.7", "GL Compatibility")
+config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Loading="*uid://bkjvueelgfihk"
 
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[dotnet]
+
+project/assembly_name="I_am_just_a_little_guy"
 
 [editor_plugins]
 
