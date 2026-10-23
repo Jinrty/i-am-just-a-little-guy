@@ -9,6 +9,6 @@ question = "Where have you been yesterday?"
 correct_answer = "farm"
 bad_answers = Array[String](["home", "pharmacy"])
 lines = Dictionary[String, Array]({
-"benson": ["He was the best Gardener in whole Bern town"],
-"yesterday": ["No one told you?", "Poor Benson got killed yesterday..."]
+"owen": ["He was the best Gardener in whole Bern town"],
+"yesterday": ["No one told you?", "Poor Owen got killed yesterday..."]
 })

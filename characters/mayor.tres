@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="person_values" format=3 uid="uid://dghn346r4sd0x"]
+
+[ext_resource type="Script" uid="uid://bcjkpeaq81rus" path="res://person_values.gd" id="1_2nl1n"]
+
+[resource]
+script = ExtResource("1_2nl1n")
+person_name = "Mayor Björn"
+question = "Did you knew Mr Owen?"
+correct_answer = "Glassess"
+bad_answers = Array[String](["Idk"])
+lines = Dictionary[String, Array]({
+"owen": ["Such a loss...", "17 stabs sounds so cruel"],
+"stabs": ["Yeah, Aparently he got killed with a knife"]
+})

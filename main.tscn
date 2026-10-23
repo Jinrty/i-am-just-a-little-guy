@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c36hfhh434vkf" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="FontFile" uid="uid://cnt6gwk02vljk" path="res://assets/Salmon Typewriter 9 Regular.ttf" id="2_0xm2m"]
+[ext_resource type="FontFile" uid="uid://do4oe1q8p20hd" path="res://assets/Salmon Typewriter 9 Bold.ttf" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://i2vubonxmatc" path="res://assets/detective.png" id="4_1bvp3"]
 
 [node name="Node2D" type="Control" unique_id=1564007476]
 layout_mode = 3
@@ -26,13 +28,34 @@ deselect_on_focus_loss_enabled = false
 [node name="Label" type="RichTextLabel" parent="." unique_id=42466042]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 0
-offset_left = 427.0
+offset_left = 317.0
 offset_top = 412.0
-offset_right = 719.0
+offset_right = 838.0
 offset_bottom = 503.0
 theme_override_fonts/normal_font = ExtResource("2_0xm2m")
+theme_override_fonts/bold_font = ExtResource("3_h2yge")
 bbcode_enabled = true
 autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Profile" type="TextureRect" parent="." unique_id=1199846439]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 93.0
+offset_right = 721.0
+offset_bottom = 309.0
+texture = ExtResource("4_1bvp3")
+
+[node name="CharName" type="Label" parent="." unique_id=1940710002]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 319.0
+offset_right = 722.0
+offset_bottom = 350.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 18
+text = "De"
 horizontal_alignment = 1
 vertical_alignment = 1
 

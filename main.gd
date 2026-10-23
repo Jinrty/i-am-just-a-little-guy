@@ -25,12 +25,14 @@ func _ready() -> void:
 	$LineEdit.add_theme_font_override("font", custom_font)
 
 	$LineEdit.grab_focus()
-	new_person.load_values(preload("uid://bymamdoams2ke"))
+	#new_person.load_values(preload("uid://bymamdoams2ke"))
+	new_person.load_values(preload("uid://dghn346r4sd0x"))
 	possible_lines = new_person.lines.keys()
 	possible_lines.append(new_person.correct_answer)
 	for i in new_person.bad_answers:
 		possible_lines.append(i)
-		
+	
+	$CharName.text = new_person.person_name
 	write(new_person.question)
 	print(possible_lines)
 
