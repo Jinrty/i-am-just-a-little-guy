@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="person_values" format=3 uid="uid://bymamdoams2ke"]
+
+[ext_resource type="Script" uid="uid://bcjkpeaq81rus" path="res://person_values.gd" id="1_u6iof"]
+
+[resource]
+script = ExtResource("1_u6iof")
+person_name = "Detective Kim"
+question = "Where have you been yesterday?"
+correct_answer = "farm"
+bad_answers = Array[String](["home", "pharmacy"])
+lines = Dictionary[String, Array]({
+"yesterday": ["No one told you?", "Poor Benson got killed yesterday..."]
+})
