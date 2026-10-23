@@ -32,24 +32,31 @@ func _ready() -> void:
 		possible_lines.append(i)
 		
 	write(new_person.question)
+	print(possible_lines)
 
 func has_special_word(line: String) -> String:
-	var placeholder = line
+	var placeholder = line.to_lower()
+	var smth = line
 	for x in possible_lines:
-		if line.contains(x):
+		if placeholder.contains(x):
 			var index = placeholder.find(x)
-			var tab = placeholder.split("")
+			var tab = smth.split("")
+			var tab2 = placeholder.split("")
 			tab.insert(index, "[b]")
 			tab.insert(index + x.length() + 1, "[/b]")
-			placeholder = "".join(tab)
-			return placeholder
-		
-	return line
+			tab2.insert(index, "[b]")
+			tab2.insert(index + x.length() + 1, "[/b]")
+			smth = "".join(tab)
+			placeholder = "".join(tab2)
+			
+	return smth
+
 	
 				
 
 func write(text: String):
 	skip = false
+	var imp = text
 	has_special_word(text)
 	text = has_special_word(text)
 	$Label.text = text
@@ -67,7 +74,7 @@ func write(text: String):
 	if queue.size() == 0:
 		return
 	
-	if text == queue[0]:
+	if imp == queue[0]:
 		queue.pop_front()
 		if queue.size() > 0:
 			await get_tree().create_timer(1.5).timeout
