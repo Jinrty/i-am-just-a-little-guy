@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://s77lmq63yt6f"]
 
 [ext_resource type="Script" uid="uid://c36hfhh434vkf" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="FontFile" uid="uid://cnt6gwk02vljk" path="res://assets/Salmon Typewriter 9 Regular.ttf" id="2_0xm2m"]
 
 [node name="Node2D" type="Control" unique_id=1564007476]
 layout_mode = 3
@@ -19,6 +20,7 @@ offset_left = 444.0
 offset_top = 377.0
 offset_right = 723.0
 offset_bottom = 408.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
 deselect_on_focus_loss_enabled = false
 
 [node name="Label" type="RichTextLabel" parent="." unique_id=42466042]

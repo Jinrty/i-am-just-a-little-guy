@@ -3,6 +3,8 @@
 [ext_resource type="FontFile" uid="uid://do4oe1q8p20hd" path="res://assets/Salmon Typewriter 9 Bold.ttf" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://o7aa24wv1jaq" path="res://title-screen.gd" id="1_qtu10"]
 [ext_resource type="Script" uid="uid://13rpj1l0jnsc" path="res://exit.gd" id="2_62e2m"]
+[ext_resource type="Theme" uid="uid://8y35mhfpjypj" path="res://assets/theme.theme" id="2_ee4bf"]
+[ext_resource type="Script" uid="uid://dmkh05jqmuyyi" path="res://accept.cs" id="3_kbped"]
 
 [node name="Control" type="Control" unique_id=144607215]
 layout_mode = 3
@@ -15,8 +17,11 @@ script = ExtResource("1_qtu10")
 
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="." unique_id=1083137147]
 title = "Accept your fate...Or die."
+initial_position = 1
+theme = ExtResource("2_ee4bf")
 ok_button_text = "Enter..."
 cancel_button_text = "Die..."
+script = ExtResource("3_kbped")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=984878782]
 layout_mode = 0
@@ -47,3 +52,5 @@ text = "Exit"
 flat = true
 alignment = 0
 script = ExtResource("2_62e2m")
+
+[connection signal="pressed" from="Button" to="." method="_on_play_button_pressed"]

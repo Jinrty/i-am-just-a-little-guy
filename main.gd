@@ -1,5 +1,6 @@
 extends Control
 
+
 var possible_lines: Array = []
 var suggestions: Array = []
 
@@ -17,6 +18,12 @@ func _process(delta: float) -> void:
 
 
 func _ready() -> void:
+	var custom_font = preload("res://assets/Salmon Typewriter 9 Regular.ttf") 
+	
+	$Label.add_theme_font_override("font", custom_font)
+	
+	$LineEdit.add_theme_font_override("font", custom_font)
+
 	$LineEdit.grab_focus()
 	new_person.load_values(preload("uid://bymamdoams2ke"))
 	possible_lines = new_person.lines.keys()
