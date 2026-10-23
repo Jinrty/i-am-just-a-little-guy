@@ -1,6 +1,8 @@
 extends Control
 
-var possible_inputs = []
+var possible_lines: Array = []
+
+var x: Array[String] = ["ss", "rd"]
 
 var new_person = person.new()
 
@@ -8,11 +10,11 @@ var new_person = person.new()
 func _ready() -> void:
 	$LineEdit.grab_focus()
 	new_person.person_name = "Detective Kim"
-	print(new_person.lines[0].question_text)
-	print(new_person.lines[0].poss[0].answer)
-	for i in new_person.lines[0].poss.size():
-		possible_inputs.append(new_person.lines[0].poss[i].answer)
-	print(possible_inputs)
+	possible_lines = new_person.lines.keys()
+	possible_lines.append(new_person.correct_answer)
+	for i in new_person.bad_answers:
+		possible_lines.append(i)
+	print(possible_lines)
 
 
 
@@ -22,10 +24,10 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 	$LineEdit.grab_focus()
 	if new_text.is_empty():
 		print("empty")
-	elif possible_inputs.has(new_text.to_lower()):
-		print(new_person.lines[0].poss[1].result)
-	elif not possible_inputs.has(new_text):
+	elif not possible_lines.has(new_text.to_lower()):
 		print("Umm...")
+	elif possible_lines.has(new_text.to_lower()):
+		print(new_person.lines[new_text])
 	
 	
 	$LineEdit.release_focus()
