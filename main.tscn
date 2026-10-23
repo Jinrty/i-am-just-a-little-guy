@@ -21,15 +21,16 @@ offset_right = 723.0
 offset_bottom = 408.0
 deselect_on_focus_loss_enabled = false
 
-[node name="Label" type="Label" parent="." unique_id=343648366]
+[node name="Label" type="RichTextLabel" parent="." unique_id=42466042]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 0
 offset_left = 434.0
 offset_top = 261.0
 offset_right = 726.0
 offset_bottom = 352.0
+bbcode_enabled = true
+autowrap_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2
 
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]

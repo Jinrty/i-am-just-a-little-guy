@@ -1,6 +1,7 @@
 extends Control
 
 var possible_lines: Array = []
+var suggestions: Array = []
 
 var new_person = person.new()
 var queue: Array = []
@@ -22,23 +23,38 @@ func _ready() -> void:
 	possible_lines.append(new_person.correct_answer)
 	for i in new_person.bad_answers:
 		possible_lines.append(i)
-	print(new_person.lines)
+		
+	write(new_person.question)
 
+func has_special_word(line: String) -> String:
+	var placeholder = line
+	for x in possible_lines:
+		if line.contains(x):
+			var index = placeholder.find(x)
+			var tab = placeholder.split("")
+			tab.insert(index, "[b]")
+			tab.insert(index + x.length() + 1, "[/b]")
+			placeholder = "".join(tab)
+			return placeholder
+		
+	return line
+	
+				
 
 func write(text: String):
-	await get_tree().process_frame
-	$Label.text = ""
-	speaking = true
 	skip = false
+	has_special_word(text)
+	text = has_special_word(text)
+	$Label.text = text
+	$Label.visible_characters = 0
 	for i in text.length():
 		writing = true
 		if skip:
-			$Label.text = text
+			$Label.visible_characters = -1
 			break
-		$Label.text += text[i]
+		$Label.visible_characters += 1
 		await get_tree().create_timer(0.02).timeout
 	skip = false
-	speaking = false
 	writing = false
 	
 	if queue.size() == 0:
