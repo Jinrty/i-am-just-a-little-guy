@@ -4,11 +4,17 @@
 
 [resource]
 script = ExtResource("1_2nl1n")
-person_name = "Mayor Björn"
+person_name = "Mayor Bjorn"
 question = "Did you knew Mr Owen?"
-correct_answer = "Glassess"
+correct_answer = "rifle"
 bad_answers = Array[String](["Idk"])
 lines = Dictionary[String, Array]({
+"bjorn": ["I was Owen's closest friend...", "and I will keep his secret"],
+"job": ["I am a mayor...", "Oh, you mean Owen's? He didn't have one", "That's why he died! Or maybe because of the toxin...", "I don't know! I don't trust anyone now!"],
+"lady": ["Lady Gaga? Not a big fan myself..."],
+"mayor": ["I was Owen's closest friend...", "and I will keep his secret"],
+"mayor bjorn": ["I was Owen's closest friend...", "and I will keep his secret"],
 "owen": ["Such a loss...", "17 stabs sounds so cruel"],
-"stabs": ["Yeah, Aparently he got killed with a knife"]
+"rifle": ["Did Owen told you about it?", "So you were also good friends? That...", "That means you are innocent for sure! Who would kill a friend with a gun using a knife?", "You are the only one I can trust right now little guy"],
+"stabs": ["Yeah, Aparently he got killed with a knife", "But I heard that's not all..."]
 })

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="person_values" format=3 uid="uid://b11fcqv3cr5m1"]
+
+[ext_resource type="Script" uid="uid://bcjkpeaq81rus" path="res://person_values.gd" id="1_umwif"]
+
+[resource]
+script = ExtResource("1_umwif")
+person_name = "Lady Beatrice"
+question = "Why did you kill him?"
+correct_answer = "drugs"
+bad_answers = Array[String](["idk"])
+lines = Dictionary[String, Array]({
+"beatrice": ["What do you want to know of me?", "I might be the most boring person in the town...", "I like cheese... I hate oranges... ", "Forget it"],
+"capiche": ["good"],
+"detective": ["I don't want to talk about him!"],
+"detective kim": ["I don't want to talk about him!"],
+"drugs": ["What? Who told you about that?", "Yea we made some drugs! So what?", "Listen... I won't say shit about you...", "And you will stay silent, capiche?"],
+"kim": ["Who? Do you mean the detective perchance?", "He shoud just throw mayor to jail!"],
+"lady": ["I suppose I am"],
+"lady beatrice": ["What do you want to know of me?", "I might be the most boring person in the town...", "I like cheese... I hate oranges... ", "Forget it"],
+"owen": ["such a fool...", "he should have focused on his job..."],
+"secret": ["You mean THE secret? Everybody knows about it!", "Owen had a 'hidden' rifle in his safe", "And this foolish Bjorn still believes only his closest friends know!"],
+"why": ["You tell me why! Probably to steal something!"]
+})

@@ -12,8 +12,8 @@ script = ExtResource("1_ig7tw")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2139970187]
 layout_mode = 0
-offset_right = 1155.0
-offset_bottom = 656.0
+offset_right = 1979.0
+offset_bottom = 1089.0
 color = Color(0.05411756, 0.04681389, 0.032916762, 1)
 
 [node name="LineEdit" type="LineEdit" parent="." unique_id=20381960]
@@ -59,4 +59,36 @@ text = "De"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=539648959]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 16.0
+offset_right = 716.0
+offset_bottom = 69.0
+alignment = 1
+
+[node name="ToDetective" type="Button" parent="HBoxContainer" unique_id=2044676514]
+layout_mode = 2
+text = "Detective"
+
+[node name="ToMayor" type="Button" parent="HBoxContainer" unique_id=1248813702]
+layout_mode = 2
+text = "Mayor"
+
+[node name="ToLady" type="Button" parent="HBoxContainer" unique_id=961741796]
+layout_mode = 2
+text = "Lady"
+
+[node name="Button" type="Button" parent="." unique_id=1795818101]
+layout_mode = 0
+offset_left = 1025.0
+offset_top = 44.0
+offset_right = 1064.0
+offset_bottom = 76.0
+text = "Hint"
+
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="HBoxContainer/ToDetective" to="." method="_on_to_detective_pressed"]
+[connection signal="pressed" from="HBoxContainer/ToMayor" to="." method="_on_to_mayor_pressed"]
+[connection signal="pressed" from="HBoxContainer/ToLady" to="." method="_on_to_lady_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
