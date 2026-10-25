@@ -23,6 +23,11 @@ var win3: bool = false
 
 var win: bool = false
 
+const DETECTIVE = preload("uid://i2vubonxmatc")
+const LADY = preload("uid://bv22c41puv0df")
+const MAYOR = preload("uid://dg2up3k17hyrd")
+
+
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("skip") and writing:
 		skip = true
@@ -32,6 +37,12 @@ func set_character(char: Resource) -> void:
 	new_person.load_values(char)
 	possible_lines = new_person.lines.keys()
 	possible_lines.append(new_person.correct_answer)
+	if new_person.person_name == "Detective Kim":
+		$Profile.texture = DETECTIVE
+	if new_person.person_name == "Mayor Bjorn":
+		$Profile.texture = MAYOR
+	if new_person.person_name == "Lady Beatrice":
+		$Profile.texture = LADY
 	$CharName.visible_characters = 0
 	$CharName.text = new_person.person_name
 	for i in $CharName.text.length():
@@ -182,6 +193,8 @@ func _on_button_pressed() -> void:
 		if hints.has(j):
 			temp_arr3.append(j)
 	var result : Array = remove_duplicates(temp_arr3)
+	if result.size() == 0:
+		return
 	var hint = result[randi_range(0, result.size() - 1)]
 	$Hint.text = hint
 	$Hint.visible_characters = 0

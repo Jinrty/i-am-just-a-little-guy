@@ -1,7 +1,7 @@
 extends Node
 class_name person
 
-
+var image = preload("uid://dg2up3k17hyrd")
 var person_name: String = "Mr Guy"
 var question: String = "Do you know me?"
 var correct_answer: String = "no"

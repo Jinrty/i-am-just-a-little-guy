@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="person_values" format=3 uid="uid://bymamdoams2ke"]
 
 [ext_resource type="Script" uid="uid://bcjkpeaq81rus" path="res://person_values.gd" id="1_u6iof"]
+[ext_resource type="Texture2D" uid="uid://i2vubonxmatc" path="res://assets/detective.png" id="1_vhpvv"]
 
 [resource]
 script = ExtResource("1_u6iof")
+image = ExtResource("1_vhpvv")
 person_name = "Detective Kim"
 question = "Where have you been yesterday?"
 correct_answer = "farm"

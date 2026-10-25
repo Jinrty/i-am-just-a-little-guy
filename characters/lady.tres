@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="person_values" format=3 uid="uid://b11fcqv3cr5m1"]
 
+[ext_resource type="Texture2D" uid="uid://bv22c41puv0df" path="res://assets/lady.png" id="1_fwkfw"]
 [ext_resource type="Script" uid="uid://bcjkpeaq81rus" path="res://person_values.gd" id="1_umwif"]
 
 [resource]
 script = ExtResource("1_umwif")
+image = ExtResource("1_fwkfw")
 person_name = "Lady Beatrice"
 question = "Why did you kill him?"
 correct_answer = "drugs"

@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="person_values" format=3 uid="uid://dghn346r4sd0x"]
 
 [ext_resource type="Script" uid="uid://bcjkpeaq81rus" path="res://person_values.gd" id="1_2nl1n"]
+[ext_resource type="Texture2D" uid="uid://dg2up3k17hyrd" path="res://assets/mayor.png" id="1_2y052"]
 
 [resource]
 script = ExtResource("1_2nl1n")

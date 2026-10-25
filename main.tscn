@@ -69,14 +69,17 @@ alignment = 1
 
 [node name="ToDetective" type="Button" parent="HBoxContainer" unique_id=2044676514]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0xm2m")
 text = "Detective"
 
 [node name="ToMayor" type="Button" parent="HBoxContainer" unique_id=1248813702]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0xm2m")
 text = "Mayor"
 
 [node name="ToLady" type="Button" parent="HBoxContainer" unique_id=961741796]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0xm2m")
 text = "Lady"
 
 [node name="Button" type="Button" parent="." unique_id=1795818101]
@@ -85,7 +88,9 @@ offset_left = 1025.0
 offset_top = 44.0
 offset_right = 1064.0
 offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
 text = "Hint"
+flat = true
 
 [node name="Hint" type="Label" parent="." unique_id=1918392937]
 layout_mode = 0
