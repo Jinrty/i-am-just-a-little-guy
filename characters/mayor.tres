@@ -9,9 +9,15 @@ question = "Did you knew Mr Owen?"
 correct_answer = "rifle"
 bad_answers = Array[String](["Idk"])
 lines = Dictionary[String, Array]({
+"beatrice": ["Don't listen to her... she is a drug addict"],
 "bjorn": ["I was Owen's closest friend...", "and I will keep his secret"],
+"detective": ["He still asks you were you have been?", "Why won't you tell him you were at the farm?", "Cause you were there... right?"],
+"detective kim": ["He still asks you were you have been?", "Why won't you tell him you were at the farm?", "Cause you were there... right?"],
 "job": ["I am a mayor...", "Oh, you mean Owen's? He didn't have one", "That's why he died! Or maybe because of the toxin...", "I don't know! I don't trust anyone now!"],
+"kim": ["He still asks you were you have been?", "Why won't you tell him you were at the farm?", "Cause you were there... right?"],
+"knife": ["Kitchen knife to be precise", "Killer left it at the scene"],
 "lady": ["Lady Gaga? Not a big fan myself..."],
+"lady beatrice": ["Don't listen to her... she is a drug addict"],
 "mayor": ["I was Owen's closest friend...", "and I will keep his secret"],
 "mayor bjorn": ["I was Owen's closest friend...", "and I will keep his secret"],
 "owen": ["Such a loss...", "17 stabs sounds so cruel"],

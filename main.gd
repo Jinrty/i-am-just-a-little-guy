@@ -15,6 +15,11 @@ var speaking: bool = false
 var skip: bool = false
 var writing: bool = false
 
+var win1: bool = false
+var win2: bool = false
+var win3: bool = false
+
+var win: bool = false
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("skip") and writing:
@@ -86,6 +91,9 @@ func write(text: String):
 			write(queue[0])
 		else:
 			$LineEdit.call_deferred("grab_focus")
+			if win:
+				await get_tree().create_timer(1.0).timeout
+				get_tree().change_scene_to_file("res://end.tscn")
 	
 	
 
@@ -109,6 +117,16 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 		else:
 			queue += new_person.lines[line]
 			write(queue[0])
+		if new_person.correct_answer == line:
+			if new_person.person_name == "Detective Kim":
+				win1 = true
+			if new_person.person_name == "Mayor Bjorn":
+				win2 = true
+			if new_person.person_name == "Lady Beatrice":
+				win3 = true
+			
+			if(win1 and win2 and win3):
+				win = true
 	
 	$LineEdit.release_focus()
 	

@@ -10,14 +10,19 @@ correct_answer = "drugs"
 bad_answers = Array[String](["idk"])
 lines = Dictionary[String, Array]({
 "beatrice": ["What do you want to know of me?", "I might be the most boring person in the town...", "I like cheese... I hate oranges... ", "Forget it"],
+"bjorn": ["He is son of a... Nevermind"],
 "capiche": ["good"],
 "detective": ["I don't want to talk about him!"],
 "detective kim": ["I don't want to talk about him!"],
 "drugs": ["What? Who told you about that?", "Yea we made some drugs! So what?", "Listen... I won't say shit about you...", "And you will stay silent, capiche?"],
+"hunting": ["All that training for nothing...", "He should focus on his actual job"],
 "kim": ["Who? Do you mean the detective perchance?", "He shoud just throw mayor to jail!"],
 "lady": ["I suppose I am"],
 "lady beatrice": ["What do you want to know of me?", "I might be the most boring person in the town...", "I like cheese... I hate oranges... ", "Forget it"],
+"mayor": ["He is son of a... Nevermind"],
+"mayor bjorn": ["He is son of a... Nevermind"],
 "owen": ["such a fool...", "he should have focused on his job..."],
 "secret": ["You mean THE secret? Everybody knows about it!", "Owen had a 'hidden' rifle in his safe", "And this foolish Bjorn still believes only his closest friends know!"],
+"steal": ["Well... Actually don't worry about it"],
 "why": ["You tell me why! Probably to steal something!"]
 })
