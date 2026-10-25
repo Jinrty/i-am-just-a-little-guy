@@ -9,14 +9,11 @@ question = "Where have you been yesterday?"
 correct_answer = "farm"
 bad_answers = Array[String](["home", "pharmacy"])
 lines = Dictionary[String, Array]({
-"Jinrty": ["Such a cool guy... I wish I was as cool as him"],
-"Jintry": ["You spelled it wrong..."],
 "beatrice": ["Shady woman, I will tell you that", "But I don't trust you enough little guy", "you are a suspect too after all"],
 "bjorn": ["I heard he was a friend of our Owen", "Aparently they both liked hunting"],
 "detective": ["yes I am"],
 "detective kim": ["yes I am"],
 "farm": ["You were at the farm? I guess it would check out", "Why didn't you say so in the first place?", "Well... I guess little guy like you was just confused..."],
-"hotel talk": ["Oh hell yeah! The best game ever!"],
 "kim": ["Why do you ask?", "That's rather souspicious..."],
 "lady": ["which one?"],
 "lady beatrice": ["Shady woman, I will tell you that", "But I don't trust you enough little guy", "you are a suspect too after all"],

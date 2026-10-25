@@ -4,7 +4,9 @@ const detective = preload("uid://bymamdoams2ke")
 const mayor = preload("uid://dghn346r4sd0x")
 const lady = preload("uid://b11fcqv3cr5m1")
 
+var all_hints: Array = []
 var hints: Array = []
+var used_hints: Array = []
 var possible_lines: Array = []
 var suggestions: Array = []
 
@@ -43,10 +45,20 @@ func _ready() -> void:
 	$LineEdit.add_theme_font_override("font", custom_font)
 	$LineEdit.grab_focus()
 	set_character(detective)
+	all_hints.append_array(new_person.lines.keys())
+	set_character(lady)
+	all_hints.append_array(new_person.lines.keys())
+	set_character(mayor)
+	all_hints.append_array(new_person.lines.keys())
+	set_character(detective)
 
 func has_special_word(line: String) -> String:
 	var placeholder = line.to_lower()
 	var smth = line
+	for i in all_hints:
+		if placeholder.contains(i):
+			hints.append(i)
+				
 	for x in possible_lines:
 		if placeholder.contains(x):
 			var index = placeholder.find(x)
@@ -58,8 +70,6 @@ func has_special_word(line: String) -> String:
 			tab2.insert(index + x.length() + 1, "[/b]")
 			smth = "".join(tab)
 			placeholder = "".join(tab2)
-			if not hints.has(x):
-				hints.push_back(x)
 	return smth
 
 	
@@ -105,6 +115,8 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 	$LineEdit.grab_focus()
 	skip = false
 	var line = new_text.to_lower()
+	if not used_hints.has(line):
+		used_hints.append(line) 
 	if new_text.is_empty():
 		print("empty")
 	elif not possible_lines.has(line):
@@ -143,10 +155,40 @@ func _on_to_mayor_pressed() -> void:
 func _on_to_lady_pressed() -> void:
 	set_character(lady)
 
+func remove_duplicates(arr: Array) -> Array:
+	var unique: Array = []
+	var dict: Dictionary = {}
+	for item in arr:
+		if not dict.has(item):
+			dict[item] = true
+			unique.append(item)
+	return unique
 
 func _on_button_pressed() -> void:
 	var temp_arr: Array = []
-	#for x in hints:
-	#	if possible_lines.has(x):
-	#		temp_arr.append(x)
-	#print(temp_arr)
+	for x in possible_lines:
+		if possible_lines.has(x):
+			temp_arr.append(x)
+	
+	var temp_arr2 : Array = []
+	
+	for i in temp_arr:
+		if not used_hints.has(i):
+			temp_arr2.append(i)
+	
+	var temp_arr3 : Array = []
+	
+	for j in temp_arr2:
+		if hints.has(j):
+			temp_arr3.append(j)
+	var result : Array = remove_duplicates(temp_arr3)
+	var hint = result[randi_range(0, result.size() - 1)]
+	$Hint.text = hint
+	$Hint.visible_characters = 0
+	for z in $Hint.text.length():
+		$Hint.visible_characters += 1
+		await get_tree().create_timer(0.02).timeout
+	await get_tree().create_timer(3).timeout
+	$Hint.text = hint
+	$Hint.visible_characters = 0
+		

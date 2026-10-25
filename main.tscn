@@ -87,6 +87,16 @@ offset_right = 1064.0
 offset_bottom = 76.0
 text = "Hint"
 
+[node name="Hint" type="Label" parent="." unique_id=1918392937]
+layout_mode = 0
+offset_left = 957.0
+offset_top = 91.0
+offset_right = 1125.0
+offset_bottom = 138.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="HBoxContainer/ToDetective" to="." method="_on_to_detective_pressed"]
 [connection signal="pressed" from="HBoxContainer/ToMayor" to="." method="_on_to_mayor_pressed"]
